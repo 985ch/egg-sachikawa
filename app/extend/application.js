@@ -1,5 +1,9 @@
 'use strict';
 
-module.exports = {
+const RouterFactory = require('../factory');
 
+module.exports = {
+  get RouterFactory() {
+    return RouterFactory;
+  },
 };

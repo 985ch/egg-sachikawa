@@ -1,8 +1,11 @@
 sudo: false
 language: node_js
+services:
+  - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE maindb;'
 node_js:
-  - '8'
-  - '9'
+  - '10'
 install:
   - npm i npminstall && npminstall
 script:

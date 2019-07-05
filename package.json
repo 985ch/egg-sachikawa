@@ -1,24 +1,30 @@
 {
   "name": "sachikawa",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "dependencies": {
-    "egg": "^2.3.0",
+    "egg": "^2.15.1",
+    "egg-cache-9": "^1.1.0",
+    "egg-redis": "^2.4.0",
+    "egg-redlock-9": "^1.0.1",
     "egg-router-factory": "^1.0.2",
-    "koa-ajv-parser": "^1.0.0"
+    "egg-sequelize": "^5.1.0",
+    "koa-ajv-parser": "^1.1.0",
+    "koa-ip": "^2.0.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
-    "autod-egg": "^1.0.0",
-    "egg-bin": "^4.4.0",
-    "egg-ci": "^1.8.0",
-    "egg-mock": "^3.14.0",
-    "eslint": "^4.18.0",
-    "eslint-config-egg": "^7.0.0",
-    "webstorm-disable-index": "^1.2.0"
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "webstorm-disable-index": "^1.2.0",
+    "mysql2": "^1.6.5"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
@@ -30,7 +36,7 @@
     "pkgfiles": "egg-bin pkgfiles"
   },
   "ci": {
-    "version": "8, 9"
+    "version": "10"
   },
   "repository": {
     "type": "git",
@@ -45,7 +51,8 @@
     "index.js",
     "lib",
     "app",
-    "config"
+    "config",
+    "app.js"
   ],
   "eslintIgnore": [
     "coverage",
