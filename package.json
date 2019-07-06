@@ -1,6 +1,6 @@
 {
   "name": "egg-sachikawa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "dependencies": {
     "egg": "^2.15.1",
