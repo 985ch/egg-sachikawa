@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports = {
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  },
   routerFactory: {
     enable: true,
     package: 'egg-router-factory',
@@ -20,5 +24,9 @@ module.exports = {
   redlock9: {
     enable: true,
     package: 'egg-redlock-9',
+  },
+  rpcLike: {
+    enable: true,
+    package: 'egg-rpc-like',
   },
 };

@@ -23,3 +23,14 @@ exports.sequelize = {
     },
   ],
 };
+exports.cache9 = {
+  default: {
+    ttl: 300,
+  },
+  clients: {
+    http: {
+      class: 'redis',
+      rds: { host: '127.0.0.1' },
+    },
+  },
+};

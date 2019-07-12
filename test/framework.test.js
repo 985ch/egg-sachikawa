@@ -2,6 +2,11 @@
 
 const mock = require('egg-mock');
 
+let s = '';
+for (let i = 0; i < 2019; i++) {
+  s += 'x';
+}
+
 describe('test/framework.test.js', () => {
   let app;
   before(() => {
@@ -18,8 +23,9 @@ describe('test/framework.test.js', () => {
 
   it('should GET /', () => {
     return app.httpRequest()
-      .get('/')
-      .expect('framework-example_123456')
+      .get('/?str=x')
+      .set('Accept-Encoding', 'gzip')
+      .expect(s)
       .expect(200);
   });
 });
