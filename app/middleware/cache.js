@@ -17,8 +17,8 @@ module.exports = options => {
       const data = await cache.getCache(dataInfo.dataKey, dataOpt);
       if (data) {
         ctx.body = dataInfo.buffer ? Buffer.from(data, 'binary') : (dataInfo.isJson ? JSON.parse(data) : data);
+        ctx.set('Content-Type', dataInfo.contentType);
         if (dataInfo.encoding) {
-          ctx.set('Content-Type', dataInfo.contentType);
           ctx.set('Content-Encoding', dataInfo.encoding);
           ctx.res.removeHeader('Content-Length');
         }
