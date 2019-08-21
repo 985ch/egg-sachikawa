@@ -4,7 +4,7 @@ const _ = require('lodash');
 
 module.exports = options => {
   let errFunc;
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV === 'production') {
     errFunc = (e, ctx) => (ctx.fail(options.errText || '服务器发生未知错误'));
   } else {
     errFunc = (e, ctx) => { ctx.fail(e.stack); };
