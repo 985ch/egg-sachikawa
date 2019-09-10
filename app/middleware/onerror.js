@@ -24,6 +24,12 @@ module.exports = options => {
           ctx.status = 403;
           ctx.body = e.message;
           break;
+        case 'FastFailError':
+          {
+            const { msg, code, data } = e.data;
+            ctx.fail(msg, code, data);
+          }
+          break;
         default: // 其他未捕获错误
           ctx.logger.error(e);
           errFunc(e, ctx);
