@@ -1,30 +1,30 @@
 {
   "name": "egg-sachikawa",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "",
   "dependencies": {
-    "egg": "^2.15.1",
+    "egg": "^2.23.0",
     "egg-cache-9": "^1.1.0",
     "egg-cors": "^2.2.0",
     "egg-redis": "^2.4.0",
     "egg-redlock-9": "^1.0.1",
     "egg-router-factory": "^1.0.2",
-    "egg-rpc-like": "^1.0.1",
-    "egg-sequelize": "^5.1.0",
+    "egg-rpc-like": "^1.1.0",
+    "egg-sequelize": "^5.2.0",
     "koa-ajv-parser": "^1.1.0",
     "koa-compress": "^3.0.0",
     "koa-ip": "^2.0.0"
   },
   "devDependencies": {
-    "autod": "^3.0.1",
+    "autod": "^3.1.0",
     "autod-egg": "^1.1.0",
-    "egg-bin": "^4.11.0",
-    "egg-ci": "^1.11.0",
-    "egg-mock": "^3.21.0",
-    "eslint": "^5.13.0",
-    "eslint-config-egg": "^7.1.0",
+    "egg-bin": "^4.13.0",
+    "egg-ci": "^1.13.0",
+    "egg-mock": "^3.23.2",
+    "eslint": "^6.4.0",
+    "eslint-config-egg": "^7.5.1",
     "webstorm-disable-index": "^1.2.0",
-    "mysql2": "^1.6.5"
+    "mysql2": "^1.7.0"
   },
   "engines": {
     "node": ">=10.0.0"
