@@ -1,14 +1,7 @@
 'use strict';
 
 const _ = require('lodash');
-const CustomError = require('../../lib/errors');
-
-class FastFailError extends CustomError {
-  constructor(msg, code, data) {
-    super(code + ':' + msg);
-    this.data = { msg, code, data };
-  }
-}
+const { FastFailError } = require('../../lib/errors');
 
 function setBody(code, msg, data) {
   return { code, msg, data };
