@@ -2,6 +2,7 @@ sudo: false
 language: node_js
 services:
   - mysql
+  - redis-server
 before_install:
   - npm i npminstall -g && mysql -e 'CREATE DATABASE maindb;'
 node_js:
