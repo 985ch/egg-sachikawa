@@ -1,4 +1,22 @@
-# 项目说明
+# egg-sachikawa
+![node version][node-image]
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][codecov-image]][codecov-url]
+[![David deps][david-image]][david-url]
+[![npm download][download-image]][download-url]
+
+[node-image]: https://img.shields.io/badge/node-%3E%3D8-blue.svg
+[npm-image]: https://img.shields.io/npm/v/egg-sachikawa.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/egg-sachikawa
+[travis-image]: https://img.shields.io/travis/985ch/egg-sachikawa.svg?style=flat-square
+[travis-url]: https://travis-ci.org/985ch/egg-sachikawa
+[codecov-image]: https://img.shields.io/codecov/c/github/985ch/egg-sachikawa.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/985ch/egg-sachikawa?branch=master
+[david-image]: https://img.shields.io/david/985ch/egg-sachikawa.svg?style=flat-square
+[david-url]: https://david-dm.org/985ch/egg-sachikawa
+[download-image]: https://img.shields.io/npm/dm/egg-sachikawa.svg?style=flat-square
+[download-url]: https://npmjs.org/package/egg-sachikawa
 
  egg-sachikawa是一套基于[egg.js](https://eggjs.org/)的大中型应用后端框架，该框架在基本egg框架的基础上集成了诸多应用后端功能。使开发者不需要掌握太多的知识，仅仅只需要编写少量业务代码就能轻松的搭建一个安全完整的应用后端。
 
