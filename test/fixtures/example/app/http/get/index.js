@@ -10,9 +10,7 @@ module.exports = () => {
       str: 'string',
     },
     cache: {
-      getKey(ctx) {
-        return ctx.path + ctx.state.params.str;
-      },
+      ctxKey: ctx => ctx.path + ctx.state.params.str,
     },
     compress: {
       threshold: 1024,

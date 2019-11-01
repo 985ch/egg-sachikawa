@@ -3,13 +3,19 @@ const Stream = require('stream');
 const _ = require('lodash');
 
 module.exports = options => {
-  const infoOpt = _.assign({}, options, { raw: false });
-  const dataOpt = _.assign({}, options, { raw: true });
   return async (ctx, next) => {
-    const cache = ctx.app.cache9.get(options.cache);
-    const ctxKey = options.ctxKey(ctx);
+    options = _.assign({
+      cache: 'http',
+      ctxKey: ctx => ctx.path,
+      ttl: 300,
+    }, ctx.app.config.apiCache || {}, options);
+    const infoOpt = _.assign({}, options, { raw: false });
+    const dataOpt = _.assign({}, options, { raw: true });
+
+    const cache = ctx.app.cache9.get(options.cache); // 缓存实例
+    const ctxKey = options.ctxKey(ctx); // 基本缓存键值
     const acceptEncoding = ctx.acceptsEncodings('gzip', 'deflate', 'identity');
-    const infoKey = 'i:' + acceptEncoding + ':' + ctxKey;
+    const infoKey = 'i:' + acceptEncoding + ':' + ctxKey; // 对应具体数据编码的缓存键值
 
     // 尝试从缓存中获取数据并直接返回
     const dataInfo = await cache.getCache(infoKey, infoOpt);
