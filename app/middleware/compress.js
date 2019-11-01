@@ -3,8 +3,8 @@
 const _ = require('lodash');
 const compress = require('koa-compress');
 
-module.exports = options => {
-  const compressConfig = _.assign({ threshold: 4096 }, this.app.config.compress || {});
+module.exports = (options, config) => {
+  const compressConfig = _.assign({ threshold: 4096 }, config || {});
   if (options === true) {
     options = compressConfig;
   } else {

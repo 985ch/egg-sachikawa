@@ -11,7 +11,7 @@ class MyFactory extends RouterFactory {
     if (obj.cache && this.app.config.cache9) {
       args.push(middlewares.cache(obj.cache));
     }
-    if (obj.compress) args.push(middlewares.compress(obj.compress));
+    if (obj.compress) args.push(middlewares.compress(obj.compress, this.app.config.compress));
   }
 }
 
