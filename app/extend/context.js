@@ -12,7 +12,7 @@ module.exports = {
     if (!_.isUndefined(this.body)) {
       return this.logger.error('ctx.body不可重复设置');
     }
-    this.body = setBody(0, msg, data);
+    this.body = setBody(this.app.errCode.SUCCESS, msg, data);
   },
   fail(msg, code, data) {
     if (_.isUndefined(code)) {
