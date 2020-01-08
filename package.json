@@ -1,11 +1,11 @@
 {
   "name": "egg-sachikawa",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "一个用于后端项目的egg框架",
   "dependencies": {
     "lodash": "^4.17.15",
     "egg": "^2.26.0",
-    "egg-cache-9": "^1.1.0",
+    "egg-cache-9": "^1.1.1",
     "egg-cors": "^2.2.3",
     "egg-redis": "^2.4.0",
     "egg-redlock-9": "^1.0.1",
