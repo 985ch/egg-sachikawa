@@ -1,31 +1,31 @@
 {
   "name": "egg-sachikawa",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "一个用于后端项目的egg框架",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "egg": "^2.26.0",
-    "egg-cache-9": "^1.1.1",
+    "lodash": "^4.17.19",
+    "egg": "^2.27.0",
+    "egg-cache-9": "^1.1.2",
     "egg-cors": "^2.2.3",
     "egg-redis": "^2.4.0",
     "egg-redlock-9": "^1.0.1",
     "egg-router-factory": "^1.0.2",
     "egg-rpc-like": "^1.1.1",
-    "egg-sequelize": "^5.2.0",
+    "egg-sequelize": "^5.2.2",
     "koa-ajv-parser": "^1.1.1",
-    "koa-compress": "^3.0.0",
+    "koa-compress": "^5.0.1",
     "koa-ip": "^2.0.0"
   },
   "devDependencies": {
     "autod": "^3.1.0",
     "autod-egg": "^1.1.0",
-    "egg-bin": "^4.14.0",
-    "egg-ci": "^1.13.1",
-    "egg-mock": "^3.24.2",
-    "eslint": "^6.7.2",
-    "eslint-config-egg": "^8.0.0",
+    "egg-bin": "^4.15.0",
+    "egg-ci": "^1.15.0",
+    "egg-mock": "^4.0.0",
+    "eslint": "^7.4.0",
+    "eslint-config-egg": "^8.0.1",
     "webstorm-disable-index": "^1.2.0",
-    "mysql2": "^2.0.2"
+    "mysql2": "^2.1.0"
   },
   "engines": {
     "node": ">=10.0.0"
