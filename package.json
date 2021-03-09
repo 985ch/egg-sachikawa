@@ -1,6 +1,6 @@
 {
   "name": "egg-sachikawa",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "一个用于后端项目的egg框架",
   "dependencies": {
     "lodash": "^4.17.19",
@@ -10,7 +10,7 @@
     "egg-redis": "^2.4.0",
     "egg-redlock-9": "^1.0.2",
     "egg-router-factory": "^1.0.2",
-    "egg-rpc-like": "^1.2.0",
+    "egg-rpc-like": "^1.2.1",
     "egg-sequelize": "^5.2.2",
     "koa-ajv-parser": "^1.1.1",
     "koa-compress": "^5.0.1",
