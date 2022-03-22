@@ -1,6 +1,6 @@
 {
   "name": "egg-sachikawa",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "一个用于后端项目的egg框架",
   "dependencies": {
     "lodash": "^4.17.19",

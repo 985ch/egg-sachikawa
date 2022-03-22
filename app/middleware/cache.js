@@ -4,16 +4,25 @@ const _ = require('lodash');
 
 module.exports = options => {
   return async (ctx, next) => {
-    options = _.assign({
+    let opt;
+    // 获取实际缓存配置
+    if (_.isFunction(options)) {
+      opt = await options(ctx);
+      if (!opt) { // 不需要缓存则直接返回
+        await next();
+        return;
+      }
+    }
+    opt = _.assign({
       cache: 'http',
-      ctxKey: ctx => ctx.path,
+      ctxKey: ctx.path,
       ttl: 300,
-    }, ctx.app.config.apiCache || {}, options);
-    const infoOpt = _.assign({}, options, { raw: false });
-    const dataOpt = _.assign({}, options, { raw: true });
+    }, ctx.app.config.apiCache || {}, opt);
+    const infoOpt = _.assign({}, opt, { raw: false });
+    const dataOpt = _.assign({}, opt, { raw: true });
 
-    const cache = ctx.app.cache9.get(options.cache); // 缓存实例
-    const ctxKey = options.ctxKey(ctx); // 基本缓存键值
+    const cache = ctx.app.cache9.get(opt.cache); // 缓存实例
+    const ctxKey = _.isFunction(opt.ctxKey) ? opt.ctxKey(ctx) : opt.ctxKey;
     const acceptEncoding = ctx.acceptsEncodings('gzip', 'deflate', 'identity');
     const infoKey = 'i:' + acceptEncoding + ':' + ctxKey; // 对应具体数据编码的缓存键值
 
